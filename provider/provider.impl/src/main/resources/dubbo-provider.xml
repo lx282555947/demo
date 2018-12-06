@@ -7,9 +7,10 @@
 	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <dubbo:application name="provider"/>
-    <dubbo:registry protocol="zookeeper" address="localhost:2181"/>
-    <!--<dubbo:registry address="N/A"/>-->
+    <!--向zookeeper注册-->
+    <!--<dubbo:registry protocol="zookeeper" address="localhost:2181"/>-->
+    <!--不向zookeeper注册，用于直连-->
+    <dubbo:registry protocol="zookeeper" address="localhost:2181" register="false"/>
     <dubbo:protocol name="dubbo" port="20880"/>
-    <dubbo:service interface="com.lixin.api.service.ProviderService"
-                   ref="providerService"/>
+    <dubbo:service interface="com.lixin.api.service.ProviderService" ref="providerService"/>
 </beans>

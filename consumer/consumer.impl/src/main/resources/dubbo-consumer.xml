@@ -7,6 +7,9 @@
 	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <dubbo:application name="consumer"/>
-    <!--<dubbo:registry protocol="zookeeper" address="localhost:2181"/>-->
-    <dubbo:reference interface="com.lixin.api.service.ProviderService" url="dubbo://localhost:20880"/>
+    <dubbo:registry protocol="zookeeper" address="localhost:2181"/>
+    <!--从zookeeper获取服务并调用-->
+    <!--<dubbo:reference id="providerService" interface="com.lixin.api.service.ProviderService"/>-->
+    <!--不从zookeeper获取服务，直接通过dubbo服务的ip和端口对接口进行调用-->
+    <dubbo:reference id="providerService" interface="com.lixin.api.service.ProviderService" url="dubbo://localhost:20880"/>
 </beans>

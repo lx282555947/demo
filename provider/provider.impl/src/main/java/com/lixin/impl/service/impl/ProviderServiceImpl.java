@@ -8,6 +8,6 @@ public class ProviderServiceImpl implements ProviderService {
 
     @Override
     public String sayHello() {
-        return "hello xxx！";
+        return "hello world！";
     }
 }
