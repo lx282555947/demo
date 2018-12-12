@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello WebSocket</title>
+    <link href="/static/bootstrap.css" rel="stylesheet"/>
+    <link href="/static/main.css" rel="stylesheet"/>
+    <script src="/static/jquery.js"></script>
+    <script src="/static/sockjs.min.js"></script>
+    <script src="/static/stomp.min.js"></script>
+    <script src="/static/app.js"></script>
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="connect1">WebSocket connection1:</label>
+                    <button id="connect1" class="btn btn-default" type="submit">Connect1</button>
+                </div>
+                <div class="form-group">
+                    <label for="connect2">WebSocket connection2:</label>
+                    <button id="connect2" class="btn btn-default" type="submit">Connect2</button>
+                </div>
+                <div class="form-group">
+                    <label for="connect3">WebSocket connection3:</label>
+                    <button id="connect3" class="btn btn-default" type="submit">Connect3</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div>
+                    <label for="my">my</label>
+                    <input type="text" id="my" class="form-control" placeholder="..."/>
+                </div>
+                <div class="form-group">
+                    <label for="message">message</label>
+                    <input type="text" id="message" class="form-control" placeholder="..."/>
+                </div>
+                <div>
+                    <label for="to">to where</label>
+                    <input type="text" id="to" class="form-control" placeholder="..."/>
+                </div>
+                <button id="send" class="btn btn-default" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="conversation" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Greetings</th>
+                </tr>
+                </thead>
+                <tbody id="greetings">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
