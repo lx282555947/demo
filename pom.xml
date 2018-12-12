@@ -9,8 +9,10 @@
     <modules>
         <module>consumer</module>
 		<module>provider</module>
-        <module>aspect</module>
-    </modules>
+		<module>fundamental</module>
+		<module>learn</module>
+		<module>learn</module>
+	</modules>
     <packaging>pom</packaging>
 
 	<name>dubbo</name>
@@ -49,6 +51,11 @@
 			<groupId>com.alibaba.boot</groupId>
 			<artifactId>dubbo-spring-boot-starter</artifactId>
 			<version>0.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.47</version>
 		</dependency>
 	</dependencies>
 
