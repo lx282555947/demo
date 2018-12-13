@@ -58,8 +58,8 @@ public class TestAopTest {
 
     @Test
     public void testAnnotationAround() {
-        String username = "lixin@wecash.net";
-        String password = "lx8329863";
+        String username = "13261989780";
+        String password = "lx123456";
         testAop.annotation(username, password);
     }
 }
