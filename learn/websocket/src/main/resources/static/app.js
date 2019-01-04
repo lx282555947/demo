@@ -19,7 +19,7 @@ function connect1() {
     stompClient.connect({name:'lixin'}, function (frame) {
         setConnected(true);
         console.log('Connected: ' + frame);
-        stompClient.subscribe('/user/queue/getResponse', function (greeting) {
+        stompClient.subscribe('/user/1/queue/getResponse', function (greeting) {
             showGreeting(greeting.body);
         });
     });

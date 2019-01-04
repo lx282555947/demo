@@ -1,5 +1,7 @@
 package com.lixin.config;
 
+import com.alibaba.fastjson.JSON;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.simp.config.ChannelRegistration;
@@ -7,12 +9,12 @@ import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.messaging.simp.stomp.StompHeaderAccessor;
 import org.springframework.messaging.support.ChannelInterceptorAdapter;
 import org.springframework.messaging.support.MessageHeaderAccessor;
+import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
 import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
-import sun.security.acl.PrincipalImpl;
 
-import java.security.Principal;
-
+@Configuration
+@EnableWebSocketMessageBroker
 public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
     /**
      * 配置websocket连接基础路径
@@ -38,7 +40,10 @@ public class WebsocketConfig implements WebSocketMessageBrokerConfigurer {
             @Override
             public Message<?> preSend(Message<?> message, MessageChannel channel) {
                 StompHeaderAccessor accessor = MessageHeaderAccessor.getAccessor(message, StompHeaderAccessor.class);
+                System.out.println(JSON.toJSONString(accessor));
                 String customerId = accessor.getFirstNativeHeader("customerId");
+                //获取订阅路径
+                String destination = accessor.getDestination();
                 switch (accessor.getCommand()) {
                     case CONNECT:
 

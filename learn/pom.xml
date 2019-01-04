@@ -19,6 +19,7 @@
         <module>token</module>
         <module>google_future</module>
         <module>rocektmq</module>
+        <module>tar</module>
     </modules>
 
 </project>
