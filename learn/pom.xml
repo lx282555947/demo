@@ -20,6 +20,8 @@
         <module>google_future</module>
         <module>rocektmq</module>
         <module>tar</module>
+        <module>csv_parse</module>
+        <module>sftp</module>
     </modules>
 
 </project>

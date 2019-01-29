@@ -3,6 +3,7 @@ package util;
 import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;
+import org.apache.commons.io.FileUtils;
 
 import java.io.*;
 
@@ -45,8 +46,11 @@ public class TarUtils {
     }
 
     public static void main(String[] args) {
-        String basePath = "/Users/lixin/Desktop/";
+        String basePath = "/Users/lixin/Desktop/result/";
         String destPath = "/Users/lixin/Desktop/fapiao/";
+        File file = new File(basePath + "20190117.md5");
+        System.out.println(file.getName());
+
         //压缩
         try {
             TarArchiveOutputStream taos = new TarArchiveOutputStream(new FileOutputStream(new File(basePath + "test.tar")));
@@ -69,5 +73,13 @@ public class TarUtils {
             ex.printStackTrace();
         }
     }
+
+//    public static void main(String[] args) throws IOException {
+//        File filePath = new File("/Users/lixin/ftp");
+//        if (filePath.exists()) {
+//            FileUtils.deleteDirectory(filePath);
+//
+//        }
+//    }
 
 }
