@@ -22,6 +22,8 @@
         <module>tar</module>
         <module>csv_parse</module>
         <module>sftp</module>
+        <module>dynamicDataSource</module>
+        <module>mybatis</module>
     </modules>
 
 </project>
