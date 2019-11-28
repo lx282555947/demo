@@ -24,6 +24,8 @@
         <module>sftp</module>
         <module>dynamicDataSource</module>
         <module>mybatis</module>
+        <module>springioc</module>
+        <module>spring_task</module>
     </modules>
 
 </project>
