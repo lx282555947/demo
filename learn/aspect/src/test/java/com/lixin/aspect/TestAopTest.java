@@ -1,5 +1,6 @@
 package com.lixin.aspect;
 
+import com.lixin.bean.User;
 import com.lixin.exception.ParamsException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -60,6 +61,9 @@ public class TestAopTest {
     public void testAnnotationAround() {
         String username = "13261989780";
         String password = "lx123456";
-        testAop.annotation(username, password);
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        testAop.annotation(user);
     }
 }

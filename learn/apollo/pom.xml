@@ -12,12 +12,12 @@
     <artifactId>apollo</artifactId>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.ctrip.framework.apollo/apollo-client -->
-        <dependency>
-            <groupId>com.ctrip.framework.apollo</groupId>
-            <artifactId>apollo-client</artifactId>
-            <version>1.2.0</version>
-        </dependency>
 
+        <dependency>
+            <groupId>com.lixin</groupId>
+            <artifactId>api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>

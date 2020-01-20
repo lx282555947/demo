@@ -13,7 +13,8 @@
 		<module>provider</module>
 		<module>fundamental</module>
 		<module>learn</module>
-	</modules>
+        <module>api</module>
+    </modules>
     <packaging>pom</packaging>
 
 	<name>dubbo</name>

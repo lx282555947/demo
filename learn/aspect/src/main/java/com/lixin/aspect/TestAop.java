@@ -1,7 +1,9 @@
 package com.lixin.aspect;
 
+import com.alibaba.fastjson.JSONObject;
 import com.lixin.annotation.MyMethodAnnotation;
 import com.lixin.annotation.MyTypeAnnotation;
+import com.lixin.bean.User;
 import com.lixin.exception.ParamsException;
 import org.springframework.stereotype.Component;
 
@@ -44,7 +46,10 @@ public class TestAop {
     }
 
     @MyMethodAnnotation(value = "hello,lixin")
-    public void annotation(String username, String password) {
+    public JSONObject annotation(User user) {
+        JSONObject result = new JSONObject();
         System.out.println("method annotatian");
+        result.put("id", "123243");
+        return result;
     }
 }

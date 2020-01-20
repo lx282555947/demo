@@ -24,6 +24,16 @@
         <module>sftp</module>
         <module>dynamicDataSource</module>
         <module>mybatis</module>
+        <module>rocketmq2</module>
+        <module>rocketmq_spring</module>
+        <module>design_mode</module>
+        <module>springCore</module>
+        <module>math</module>
+        <module>api</module>
+        <module>test</module>
+        <module>logback</module>
+        <module>dataformat</module>
+        <module>queue</module>
     </modules>
 
 </project>

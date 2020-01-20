@@ -1,6 +1,5 @@
 package com.lixin.aspect;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
 import com.alibaba.fastjson.JSON;
 import com.lixin.annotation.MyMethodAnnotation;
 import com.lixin.annotation.MyTypeAnnotation;
@@ -119,7 +118,7 @@ public class TestAspect {
             System.out.println("args:" + JSON.toJSONString(proceedingJoinPoint.getArgs()));
             //切入点执行的类型
             System.out.println("kind:" + JSON.toJSONString(proceedingJoinPoint.getKind()));
-            proceedingJoinPoint.getArgs();
+            Object[] objects = proceedingJoinPoint.getArgs();
             Annotation typeAnnotation = signature.getDeclaringType().getAnnotation(MyTypeAnnotation.class);
             System.out.println(JSON.toJSONString(typeAnnotation));
             proceed = proceedingJoinPoint.proceed();
