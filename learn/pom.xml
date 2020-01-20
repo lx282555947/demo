@@ -34,6 +34,8 @@
         <module>logback</module>
         <module>dataformat</module>
         <module>queue</module>
+        <module>springioc</module>
+        <module>spring_task</module>
     </modules>
 
 </project>
